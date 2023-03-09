@@ -1,8 +1,9 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next";
+
 export default function Custom404() {
     const router = useRouter();
     setTimeout(() => {
-        // 404를 확인하면 5초 뒤 메인 화면으로 이동
+        // 404를 확인하면 3초 뒤 메인 화면으로 이동
         router.push("/");
     }, 3000);
     return (
