@@ -20,8 +20,6 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <h1 className="text-3xl font-bold underline">Goal For you Home!</h1>
         </Layout>
     );
 }
