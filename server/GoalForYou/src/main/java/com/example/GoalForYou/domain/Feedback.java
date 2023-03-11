@@ -10,8 +10,10 @@ public class Feedback {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer feedbackId;
+    private Long feedbackId;
+
     private String title;
+
     private String content;
 
 }
