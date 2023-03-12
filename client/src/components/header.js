@@ -43,7 +43,7 @@ const Header = () => {
                     </nav>
                 </div>
             </div>
-            <div className="bg-red-500 p-5 items-center">
+            <div className="bg-white p-5 items-center">
                 <div className="flex flex-col md:flex-row">
                     <MainNav feature="Calendar" />
                     <MainNav feature="On Going" />
