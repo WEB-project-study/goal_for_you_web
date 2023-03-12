@@ -13,7 +13,9 @@ public class BadgeService {
     @Autowired
     private BadgeRepository badgeRepository;
 
-    public void createBadge() {}
+    public Long createBadge() {
+        return null;
+    }
 
     public Badge getBadge(Long id) {
         return badgeRepository.findById(id).get();
@@ -24,7 +26,9 @@ public class BadgeService {
         return badgeRepository.findAll();
     }
 
-    public void updateBadge() {}
+    public Long updateBadge() {
+        return null;
+    }
 
     public void deleteBadge() {}
 }

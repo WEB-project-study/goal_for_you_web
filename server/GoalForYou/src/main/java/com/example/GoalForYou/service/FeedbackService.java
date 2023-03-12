@@ -1,20 +1,31 @@
 package com.example.GoalForYou.service;
 
+import com.example.GoalForYou.domain.Feedback;
 import com.example.GoalForYou.repository.FeedbackRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class FeedbackService {
 
     private FeedbackRepository feedbackRepository;
 
-    public void createFeedback() {}
+    public Long createFeedback() {
+        return null;
+    }
 
-    public void getFeedback() {}
+    public Feedback getFeedback(Long id) {
+        return feedbackRepository.findById(id).get();
+    }
 
-    public void getFeedbackList() {}
+    public List<Feedback> getFeedbackList() {
+        return feedbackRepository.findAll();
+    }
 
-    public void updateFeedback() {}
+    public Long updateFeedback() {
+        return null;
+    }
 
     public void deleteFeedback() {}
 }
