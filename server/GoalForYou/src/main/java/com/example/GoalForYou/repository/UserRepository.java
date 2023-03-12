@@ -1,12 +1,12 @@
 package com.example.GoalForYou.repository;
 
 import com.example.GoalForYou.domain.User;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface UserRepository {
+public interface UserRepository extends JpaRepository<User,Long> {
 
     /**=CREATE=====================================================**/
 
@@ -43,7 +43,7 @@ public interface UserRepository {
     * @author 낙경
     *
     **/
-    Optional<User> findByUid(int uid);
+    Optional<User> findByUid(Long uid);
 
     /**
     *
@@ -73,11 +73,10 @@ public interface UserRepository {
     *
     * [delete]
     * 해당 User와 일치하는 User 튜플 영구 삭제
-    * @param user: Find..()를 통해 찾은 유저 객체
-    * @return 성공여부
+    * @param user : Find..()를 통해 찾은 유저 객체
     * @author 낙경
     *
     **/
-    Boolean delete(User user);
+    void delete(User user);
 
 }
