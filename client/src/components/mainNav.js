@@ -1,9 +1,13 @@
+import Router from "next/router";
 /*
 	px - x축 패딩3
 */
-const MainNav = ({ feature }) => {
+const MainNav = ({ feature, link }) => {
     return (
-        <button className="flex-grow items-center bg-white-100 border-2 border-fuchsia-500 px-4 rounded">
+        <button
+            className="flex-grow fitems-center bg-white-100 border-2 border-fuchsia-500 px-4 rounded"
+            onClick={() => Router.push("/" + link)}
+        >
             {feature}
 
             {/* 

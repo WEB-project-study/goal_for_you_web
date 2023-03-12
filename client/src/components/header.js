@@ -45,10 +45,10 @@ const Header = () => {
             </div>
             <div className="p-5 items-center">
                 <div className="flex flex-col md:flex-row">
-                    <MainNav feature="Calendar" />
-                    <MainNav feature="On Going" />
-                    <MainNav feature="Community" />
-                    <MainNav feature="My Page" />
+                    <MainNav feature="Calendar" link="calendar" />
+                    <MainNav feature="On Going" link="ongoing" />
+                    <MainNav feature="Community" link="community" />
+                    <MainNav feature="My Page" link="mypage" />
                 </div>
             </div>
         </header>
