@@ -8,13 +8,13 @@ public class FeedbackService {
 
     private FeedbackRepository feedbackRepository;
 
-    private void createFeedback() {}
+    public void createFeedback() {}
 
-    private void getFeedback() {}
+    public void getFeedback() {}
 
-    private void getFeedbackList() {}
+    public void getFeedbackList() {}
 
-    private void updateFeedback() {}
+    public void updateFeedback() {}
 
-    private void deleteFeedback() {}
+    public void deleteFeedback() {}
 }

@@ -15,7 +15,9 @@ public class BadgeService {
 
     public void createBadge() {}
 
-    public void getBadge() {}
+    public Badge getBadge(Long id) {
+        return badgeRepository.findById(id).get();
+    }
 
     public List<Badge> getBadgeList() {
 
