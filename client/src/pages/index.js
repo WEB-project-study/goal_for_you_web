@@ -7,7 +7,7 @@ import Layout from "../components/layout";
 
 export default function Home() {
     return (
-        <Layout>
+        <>
             <Head>
                 <title>Goal For You</title>
                 <meta
@@ -20,6 +20,6 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-        </Layout>
+        </>
     );
 }
