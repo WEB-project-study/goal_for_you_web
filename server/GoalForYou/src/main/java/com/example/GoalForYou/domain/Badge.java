@@ -10,8 +10,10 @@ public class Badge {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer badgeId;
+    private Long badgeId;
+
     private String badgeName;
+
     private String badgeImage;
 
 }
