@@ -19,7 +19,7 @@ public interface UserRepository extends JpaRepository<User,Long> {
     * @author 낙경
     *
     **/
-    User save(User user);
+    Optional<User> save(User user);
 
     /**=READ=======================================================**/
 
