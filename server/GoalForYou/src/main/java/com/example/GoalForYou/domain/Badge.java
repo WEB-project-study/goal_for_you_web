@@ -19,4 +19,16 @@ public class Badge {
 
     private String badgeImage;
 
+    public Long updateBadge(String badgeName, String badgeImage) {
+
+        this.badgeName = badgeName;
+
+        this.badgeImage = badgeImage;
+
+        return this.badgeId;
+    }
+
+    public void deleteBadge() {
+        this.deleteBadge();
+    }
 }
