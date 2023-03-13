@@ -29,6 +29,7 @@ public class User {
     @Temporal(TemporalType.DATE)
     private Date regDate;
 
+    /** EntityManager의 Persist 호출 전 이용자의 regDate를 금일로 설정 **/
     @PrePersist
     public void prePersist() {
         this.regDate = Timestamp.valueOf(LocalDateTime.now());
