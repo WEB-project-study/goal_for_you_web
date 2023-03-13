@@ -33,6 +33,4 @@ public class Feedback {
         return this.getFeedbackId();
     }
 
-    public void deleteFeedback() {}
-
 }

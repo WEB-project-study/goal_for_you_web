@@ -28,5 +28,4 @@ public class Badge {
         return this.badgeId;
     }
 
-    public void deleteBadge() {}
 }
