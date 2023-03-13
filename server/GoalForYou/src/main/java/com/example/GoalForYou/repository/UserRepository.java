@@ -47,6 +47,17 @@ public interface UserRepository extends JpaRepository<User,Long> {
 
     /**
     *
+    * [findByName]
+    * user_name으로 DB의 유저를 찾을 수 있음
+    * @param name: 찾으려는 유저의 DB상 uid
+    * @return Optional: User가 존재할 경우 객체를 얻을 수 있음
+    * @author 낙경
+    *
+    **/
+    Optional<User> findByName(String name);
+
+    /**
+    *
     * [findAll]
     * DB상의 모든 유저 리스트를 확인함
     * @return List: User 객체를 담은 List 반환
