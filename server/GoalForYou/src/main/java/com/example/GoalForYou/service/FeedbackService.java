@@ -27,4 +27,9 @@ public class FeedbackService {
         return feedbackRepository.findAll();
     }
 
+    public void deleteFeedback(Long id) {
+
+        feedbackRepository.deleteById(id);
+    }
+
 }

@@ -29,4 +29,9 @@ public class BadgeService {
         return badgeRepository.findAll();
     }
 
+    public void deleteBadge(Long id) {
+
+        badgeRepository.deleteById(id);
+    }
+
 }
