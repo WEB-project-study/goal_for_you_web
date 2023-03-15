@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import Layout from '../../components/layout'
+// import { Inter } from 'next/font/google'
+import Layout from '../components/layout'
 
 export default function OnGoing() {
     return (
