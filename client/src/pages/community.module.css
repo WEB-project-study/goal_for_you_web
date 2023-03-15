@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 18px 20px;
+    font-weight: bold;
+    border: 1px;
+  }
+  
+.left{
+
+    flex-direction: row;
+    flex: 1px;
+}
+
+.right{
+    flex-direction: row;
+    flex: 1px;
+    
+}

@@ -1,3 +1,26 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: "MontserratAlternates";
+    font-size:x-large;
+    src: url('../font/MontserratAlternates-Bold.ttf') format("truetype");
+}
+
+.font_local {
+    font-family: MontserratAlternates;
+}
+
+
+.menu-bar {
+    @apply flex w-96 h-10 flex-col m-3 rounded-xl
+    transition duration-300 transform border-2 border-purple-500
+    hover:scale-105 hover:shadow-lg hover:bg-purple-400
+   
+}
+
+.nav_menu_bar {
+    @apply
+    items-center pt-1.5 menu-bar hover:text-white
+}

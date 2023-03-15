@@ -1,0 +1,9 @@
+/*
+//NOTE
+useRouter란?
+Next.js에서 함수 형식으로 라우팅(라우터 조작) 할 수 있게 도와주는 기본 라이브러리 입니다.
+
+//METHOD
+router.push(URL) ..해당 URL로 이동
+router.replace(URL1, URL2) ..URL1으로 이동하고 URL2로 주소 변경
+*/
