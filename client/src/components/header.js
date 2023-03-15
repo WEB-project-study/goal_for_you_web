@@ -1,33 +1,43 @@
 import Link from "next/link";
 // import OnGoing from "@/pages/ongoing";
 // import MyPage from "@/pages/mypage";
+import Nav_menu_bar from "../components/nav_menu_bar";
+import Top_logo from "../../public/assets/logo.svg";
 
 export default function Header() {
     return (
         <div>
-            <header class="text-gray-600 body-font">
-                <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <header className="text-gray-600 body-font">
+                <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
                     <Link legacyBehavior href="/">
-                        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                            </svg>
-                            <span class="ml-3 text-xl">Goal For You!</span>
+                        <a>
+                        <Top_logo className="w-14 h-14"/>
                         </a>
                     </Link>
-                    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                    <Link legacyBehavior href="/">
+                        <a>
+                        <span className="ml-3 text-xl font_local">Goal For You</span>
+                        </a>
+                    </Link>
+                    <nav className="flex flex-wrap items-center justify-center p-2 text-base font_local md:ml-auto">
+                        <div className="p-1">
+                            <Link legacyBehavior href="/ongoing">
+                                <a className="inline-flex items-center px-3 py-1 mt-4 text-white bg-purple-500 border-0 rounded-xl focus:outline-none hover:bg-purple-300 hover:text-purple-700 hover: md:mt-0">
+                                    Add Goal
+                                </a>
+                            </Link>
+                        </div>
+                        <div className="p-1">
+                            <Link legacyBehavior href="/mypage">
+                                <a className="inline-flex items-center px-3 py-1 mt-4 text-white bg-purple-500 border-0 rounded-xl focus:outline-none hover:bg-purple-300 hover:text-purple-700 hover: md:mt-0">
+                                    Logout
+                                </a>
+                            </Link>
+                        </div>
                     </nav>
-                    <Link legacyBehavior href="/ongoing">
-                        <a class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                            Add Goal
-                        </a>
-                    </Link>
-                    <Link legacyBehavior href="/mypage">
-                        <a class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                            Logout
-                        </a>
-                    </Link>
                 </div>
+                <hr className="border border-purple-500"/>
+                <Nav_menu_bar />
             </header>
         </div>
     );
