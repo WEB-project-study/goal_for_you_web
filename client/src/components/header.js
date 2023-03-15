@@ -1,3 +1,9 @@
+import Link from "next/link";
+// import OnGoing from "@/pages/ongoing";
+// import MyPage from "@/pages/mypage";
+import Nav_menu_bar from "../components/nav_menu_bar";
+import Top_logo from "../../public/assets/logo.svg";
+
 export default function Header() {
     return (
         <div>
@@ -28,6 +34,8 @@ export default function Header() {
                     </svg>
                     </button> */}
                 </div>
+                <hr className="border border-purple-500" />
+                <Nav_menu_bar />
             </header>
         </div>
     );
