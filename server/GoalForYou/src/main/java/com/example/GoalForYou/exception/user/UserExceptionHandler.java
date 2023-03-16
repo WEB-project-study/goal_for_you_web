@@ -77,5 +77,26 @@ public class UserExceptionHandler {
         ErrorResponse errorResponse = new ErrorResponse(HttpStatus.CONFLICT.toString(), exception.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.CONFLICT);
     }
+
+    /**
+     *
+     * [userNotExist]
+     * 존재하지 않는 유저로 확인될 경우
+     * 중복요청 충돌 발생알림
+     * 전달될 Http응답
+     * @param exception
+     * @return Http 404 NOT_FOUND
+     * @author 낙경
+     * @version 1.0.0
+     * @date 2023-03-17
+     *
+    **/
+    @ExceptionHandler(UserNotExistException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<ErrorResponse> userNotExist(UserNotExistException exception) {
+        ErrorResponse errorResponse = new ErrorResponse(HttpStatus.CONFLICT.toString(), exception.getMessage());
+        return new ResponseEntity<>(errorResponse, HttpStatus.CONFLICT);
+    }
+
 }
 
