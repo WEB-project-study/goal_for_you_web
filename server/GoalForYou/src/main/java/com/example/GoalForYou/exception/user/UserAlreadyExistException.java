@@ -1,0 +1,18 @@
+package com.example.GoalForYou.exception.user;
+
+/**
+ *
+ * [UserAlreadyExistException]
+ * Runtime중 발생한 예외 중
+ * 이미 유저가 존재하는 경우
+ * 예외발생 및 에러코드와 함께 body 메세지 전달
+ *
+ * @author 낙경
+ * @version 1.0.0
+ * @date 2023-03-16
+ ***/
+public class UserAlreadyExistException extends RuntimeException {
+    public UserAlreadyExistException(String email) {
+        super("이미 존재하는 회원입니다. [ email: " + email + " ]");
+    }
+}
