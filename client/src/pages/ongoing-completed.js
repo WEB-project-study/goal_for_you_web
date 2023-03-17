@@ -18,7 +18,7 @@ export default function OnGoing() {
 
           <div className="ml-10 mr-10 frame">
             <div>
-              Ongoing Goals
+              Completed Goals
             </div>
           </div>
           
