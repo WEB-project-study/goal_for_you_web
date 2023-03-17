@@ -31,7 +31,7 @@ export default function Community() {
             </Head>
 
             
-            <div className="frame">
+            <div className="mt-3 ml-10 mr-10 frame">
                 <form onSubmit={onSubmit}>
                     <h3>NickName</h3>
                     <hr />
