@@ -2,7 +2,7 @@ import Link from "next/link";
 // import OnGoing from "@/pages/ongoing";
 // import MyPage from "@/pages/mypage";
 import Nav_menu_bar from "../components/nav_menu_bar";
-import Top_logo from "../../public/images/assets/logo.svg";
+import Top_logo from "../../public/assets/images/logo.svg";
 import Login from "./login";
 
 export default function Header() {
