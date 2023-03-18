@@ -6,12 +6,12 @@ const board_text = ({setTitle, setContent, title, content}) => {
                 onChange={(e) =>{
                     setTitle(e.target.value);
                 }}
-                className="text_title"
+                className="mt-1 mb-1"
                 placeholder="제목 입력하기"
                 value={title}
             />
             <textarea
-                className="text_content"
+                className="mt-1 w-90 h-80"
                 onChange={(e) => setContent(e.target.value)}
                 value={content}
                 placeholder="내용 입력하세요"
