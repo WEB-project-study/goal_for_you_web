@@ -42,7 +42,7 @@ return(
                 ref= {refParam => inputRef = refParam}
              >
         </input>
-            <div className="upload-button">
+            <div className="mt-10 border-1 bg-[#E560C8] font-size:2.1rem">
                 <button onClick={() => inputRef.click()}>사진 고르기</button>
                 <button onClick={DeleteImage}>사진 삭제하기</button>
             </div>
