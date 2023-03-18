@@ -3,7 +3,6 @@ import Link from "next/link";
 // import MyPage from "@/pages/mypage";
 import Nav_menu_bar from "../components/nav_menu_bar";
 // import Top_logo from "../../public/assets/logo.svg";
-import Top_logo from "../../public/assets/logo.svg";
 
 export default function Header() {
     return (
@@ -11,13 +10,13 @@ export default function Header() {
             <header className="text-gray-600 body-font">
                 <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
                     <Link legacyBehavior href="/">
-                        <a>
-                        <Top_logo className="w-14 h-14"/>
-                        </a>
+                        <a>{/* <Top_logo className="w-14 h-14" /> */}</a>
                     </Link>
                     <Link legacyBehavior href="/">
                         <a>
-                        <span className="ml-3 text-xl font_local">Goal For You</span>
+                            <span className="ml-3 text-xl font_local">
+                                Goal For You
+                            </span>
                         </a>
                     </Link>
                     <nav className="flex flex-wrap items-center justify-center p-2 text-base font_local md:ml-auto">
@@ -37,7 +36,7 @@ export default function Header() {
                         </div>
                     </nav>
                 </div>
-                <hr className="border border-purple-500"/>
+                <hr className="border border-purple-500" />
                 <Nav_menu_bar />
             </header>
         </div>
