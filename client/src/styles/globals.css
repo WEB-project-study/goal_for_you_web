@@ -24,3 +24,57 @@
     @apply
     items-center pt-1.5 menu-bar hover:text-white
 }
+
+.admit-button{
+    font-size : 1.1rem;
+    color:aqua;
+    border-width: 1px;
+}
+
+.submitButton{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.write-body{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    flex-wrap : wrap;
+}
+
+.uploader-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+   
+  }
+
+  .upload-button {
+      margin: 10px;
+      font-size: 1.1rem;
+    }
+
+
+ .textarea-wrapper{   
+        margin: 10px;
+        margin-left: 20px; 
+        border-width: 1px;
+        display: flex;
+        flex-direction: column;
+    }
+
+.text_title{    
+     margin: 12px;
+    } 
+.text_content{
+        margin:10px;
+        width: 300px;
+        height: 300px;
+     
+}
