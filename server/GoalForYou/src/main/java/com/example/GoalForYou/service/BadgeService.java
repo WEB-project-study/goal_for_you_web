@@ -31,9 +31,9 @@ public class BadgeService {
         return badgeRepository.findById(id).get();
     }
 
-    public List<Badge> getBadgeList() {
+    public List<Badge> getBadgeList(User user) {
 
-        return badgeRepository.findAll();
+        return badgeRepository.findByUser(user);
     }
 
     public Long updateBadge(Badge badge, String badgeName, String badgeImage) {
