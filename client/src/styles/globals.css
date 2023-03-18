@@ -5,7 +5,7 @@
 @font-face {
     font-family: "MontserratAlternates";
     font-size:x-large;
-    src: url('../assets/font/MontserratAlternates-Bold.ttf') format("truetype");
+    src: url('../../public/assets/fonts/MontserratAlternates-Bold.ttf') format("truetype");
 }
 
 .font_local {

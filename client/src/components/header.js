@@ -2,7 +2,8 @@ import Link from "next/link";
 // import OnGoing from "@/pages/ongoing";
 // import MyPage from "@/pages/mypage";
 import Nav_menu_bar from "../components/nav_menu_bar";
-// import Top_logo from "../../public/assets/logo.svg";
+import Top_logo from "../../public/images/assets/logo.svg";
+import Login from "./login";
 
 export default function Header() {
     return (
@@ -10,7 +11,9 @@ export default function Header() {
             <header className="text-gray-600 body-font">
                 <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
                     <Link legacyBehavior href="/">
-                        <a>{/* <Top_logo className="w-14 h-14" /> */}</a>
+                        <a>
+                            <Top_logo className="w-14 h-14" />
+                        </a>
                     </Link>
                     <Link legacyBehavior href="/">
                         <a>
@@ -28,11 +31,12 @@ export default function Header() {
                             </Link>
                         </div>
                         <div className="p-1">
-                            <Link legacyBehavior href="/mypage">
+                            <Login />
+                            {/* <Link legacyBehavior href="/mypage">
                                 <a className="inline-flex items-center px-3 py-1 mt-4 text-white bg-purple-500 border-0 rounded-xl focus:outline-none hover:bg-purple-300 hover:text-purple-700 hover: md:mt-0">
                                     Logout
                                 </a>
-                            </Link>
+                            </Link> */}
                         </div>
                     </nav>
                 </div>

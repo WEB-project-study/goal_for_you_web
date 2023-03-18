@@ -1,6 +1,7 @@
-import { NextAuth } from "next-auth/next";
+import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 
+//GoogleAuth 연동
 export default NextAuth({
     providers: [
         GoogleProvider({
