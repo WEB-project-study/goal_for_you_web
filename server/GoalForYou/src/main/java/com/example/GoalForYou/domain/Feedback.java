@@ -14,6 +14,8 @@ public class Feedback {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long feedbackId;
 
+    private User user;
+
     private String title;
 
     private String content;
@@ -22,13 +24,5 @@ public class Feedback {
 
     private Timestamp editDate;
 
-    public Long updateFeedback(String title, String content) {
-
-        this.title = title;
-
-        this.content = content;
-
-        return this.getFeedbackId();
-    }
 
 }

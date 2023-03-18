@@ -13,17 +13,11 @@ public class Badge {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long badgeId;
 
+    private User user;
+
     private String badgeName;
 
     private String badgeImage;
 
-    public Long updateBadge(String badgeName, String badgeImage) {
-
-        this.badgeName = badgeName;
-
-        this.badgeImage = badgeImage;
-
-        return this.badgeId;
-    }
 
 }
