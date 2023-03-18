@@ -1,5 +1,7 @@
 package com.example.GoalForYou.controller;
 
+import com.example.GoalForYou.domain.Feedback;
+import com.example.GoalForYou.domain.User;
 import com.example.GoalForYou.service.FeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,30 +14,34 @@ public class FeedbackController {
     @Autowired
     private FeedbackService feedbackService;
 
-    @PostMapping()
-    public String feedbackCreate() {
+    @PostMapping("feedback/create")
+    public String feedbackCreate(User user, String title, String content) {
 
-        return null;
+        feedbackService.createFeedback(user, title, content);
+
+        return "redirect:";
     }
 
-    @GetMapping()
-    public String feedbackRead() {
+    @GetMapping("/feedback/read/{id}")
+    public Feedback feedbackRead(Long id) {
 
-        return null;
+        return feedbackService.getFeedback(id);
     }
 
-    @PostMapping()
-    public String feedbackUpdate() {
+    @PostMapping("feedback/update/{id}")
+    public String feedbackUpdate(Feedback feedback,String title, String content) {
 
-        return null;
+        feedbackService.updateFeedback(feedback, title, content);
+
+        return "redirect:";
     }
 
-    @GetMapping()
+    @GetMapping("/feedback/delete/{id}")
     public String feedbackDelete(Long id) {
 
         feedbackService.deleteFeedback(id);
 
-        return null;
+        return "redirect:";
     }
 }
 
