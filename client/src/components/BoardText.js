@@ -6,7 +6,7 @@ const board_text = ({setTitle, setContent, title, content}) => {
                 onChange={(e) =>{
                     setTitle(e.target.value);
                 }}
-                className="mt-1 mb-2"
+                className="mt-1 mb-1"
                 placeholder="제목 입력하기"
                 value={title}
             />
