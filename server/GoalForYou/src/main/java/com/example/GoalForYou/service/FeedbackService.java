@@ -36,13 +36,14 @@ public class FeedbackService {
 //        return feedbackRepository.findByUser_id(user_id);
 //    }
 
-    public Long updateFeedback(Long feedback_id,String title, String content) {
+    public Long updateFeedback(Long id,String title, String content) {
         Timestamp now = new Timestamp(System.currentTimeMillis());
-        Feedback feedback = feedbackRepository.findById(feedback_id).get();
+        Feedback feedback = feedbackRepository.findById(id).get();
 
         feedback.setFeedback_title(title);
         feedback.setFeedback_content(content);
         feedback.setFeedback_edit_date(now);
+        feedbackRepository.save(feedback);
 
         return feedback.getFeedback_id();
     }
