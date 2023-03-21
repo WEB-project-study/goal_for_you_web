@@ -12,17 +12,17 @@ public class Feedback {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long feedbackId;
+    private Long feedback_id;
 
-    private User user;
+    private String feedback_title;
 
-    private String title;
+    private String feedback_content;
 
-    private String content;
+    private Timestamp feedback_write_date;
 
-    private Timestamp writeDate;
+    private Timestamp feedback_edit_date;
 
-    private Timestamp editDate;
+    private Long user_id;
 
 
 }

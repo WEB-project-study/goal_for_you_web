@@ -11,13 +11,13 @@ public class Badge {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long badgeId;
+    private Long badge_id;
 
-    private User user;
+    private String badge_name;
 
-    private String badgeName;
+    private String badge_image;
 
-    private String badgeImage;
+    private Long user_id;
 
 
 }
