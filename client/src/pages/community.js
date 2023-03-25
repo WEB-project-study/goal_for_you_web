@@ -5,7 +5,8 @@ import Card from "../components/Card.js";
 import Link from "next/link";
 import moment from "moment";
 import { useRouter } from "next/router";
-// import Tag from "@/components/Tag";
+import axios from "axios";
+import Tag from "@/components/Tag";
 export default function Community() {
     const boardList = [
         {
