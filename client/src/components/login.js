@@ -9,7 +9,7 @@ const Login = () => {
         return (
             <nav className="flex flex-wrap items-center justify-center p-2 text-base font_local md:ml-auto">
                 <div className="p-1">
-                    {/* Welcome, {session.user.email} */}
+                    Welcome, {session.user.email}
                     <button
                         className="inline-flex items-center px-3 py-1 mt-4 text-white bg-blue-500 border-0 rounded-xl focus:outline-none hover:bg-sky-300 hover:text-black hover: md:mt-0"
                         onClick={() => signOut()}
@@ -23,7 +23,7 @@ const Login = () => {
         return (
             <nav className="flex flex-wrap items-center justify-center p-2 text-base font_local md:ml-auto">
                 <div className="p-1">
-                    {/* <p>You are not signed in.</p> */}
+                    <p>You are not signed in.</p>
                     <button
                         className="inline-flex items-center px-3 py-1 mt-4 text-white bg-blue-500 border-0 rounded-xl focus:outline-none hover:bg-sky-300 hover:text-black hover: md:mt-0"
                         onClick={() => signIn()}
