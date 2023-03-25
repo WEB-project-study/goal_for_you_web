@@ -1,11 +1,10 @@
+import Link from "next/link";
 import Head from "next/head";
-// import { Inter } from 'next/font/google'
-import Layout from "../components/layout";
-import btnMyPage from "./../components/mypage/btnMypage";
+import { Inter } from "next/font/google";
+import Layout from "../../components/layout";
+import OnGoing_nav_menu_bar from "../../components/OnGoing_nav_menu_bar";
 
-// const inter = Inter({ subsets: ['latin'] })
-
-export default function MyPage() {
+export default function OnGoing() {
     return (
         <Layout>
             <Head>
@@ -20,13 +19,14 @@ export default function MyPage() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <>
-                <h1 className="text-3xl font-bold">My goal badges</h1>
-            </>
-            <>
-                <h1 className="text-3xl font-bold">Settings</h1>
-                <btnMyPage />
-            </>
+
+            <div className="mt-3 mb-1">
+                <OnGoing_nav_menu_bar />
+            </div>
+
+            <div className="frame ml-10 mr-10">
+                <div>Completed Goals</div>
+            </div>
         </Layout>
     );
 }
