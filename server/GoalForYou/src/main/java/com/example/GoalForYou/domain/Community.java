@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -32,13 +33,16 @@ public class Community extends TimeEntity {
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "user_id")
+//    private User user;
 
-    @OneToMany(mappedBy = "posts", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
-    @OrderBy("id asc") // 댓글 정렬
-    private List<Comment> comments;
+    /**댓글 연관관계*/
+//    @OneToMany(mappedBy = "communityEntity", fetch = FetchType.LAZY)
+//    private List<Reply> replyList = new ArrayList<>();
+    @Column(length = 20, nullable = false)
+    private List<Tag> tags;
+
 
 //    @Builder
 //    public Photo(String origFileName, String filePath, Long fileSize){
@@ -47,13 +51,16 @@ public class Community extends TimeEntity {
 //        this.fileSize = fileSize;
 //    }
 
-    @Builder
-    public Community(Long id, String title, String content, String writer, Long fileId) {
+    @Builder /** List<Reply> reply 넣기*/
+    public Community(Long id, String title, List<Tag> tags, String content, String writer, Long fileId) {
         this.communityId = id;
-        this.writer = writer;
         this.title = title;
+        this.tags = tags;
         this.content = content;
+        this.writer = writer;
         this.fileId = fileId;
+
+//        this.reply = reply;
     }
 
 //    @Builder
