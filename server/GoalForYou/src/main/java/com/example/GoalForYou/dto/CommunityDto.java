@@ -12,6 +12,7 @@ public class CommunityDto {
     private String title;
     private String content;
     private Long fileId;
+
 //    private String image;
     private String writer;
     private LocalDateTime createdDate;
@@ -25,7 +26,6 @@ public class CommunityDto {
                 .title(title)
                 .content(content)
                 .fileId(fileId)
-//                .image(image)
                 .writer(writer)
 //                .tags(tags)
                 .build();
@@ -40,12 +40,13 @@ public class CommunityDto {
         this.title = title;
         this.content = content;
         this.fileId = fileId;
-//        this.image = image;
         this.writer = writer;
         this.createdDate = createdDate;
         this.modifiedDate = modifiedDate;
 //        this.tags = tags;
     }
+
+
 }
 
 
