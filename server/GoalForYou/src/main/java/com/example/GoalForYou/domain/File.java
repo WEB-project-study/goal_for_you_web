@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Getter
@@ -37,5 +37,21 @@ public class File {
         this.origFilename = origFilename;
         this.filename = filename;
         this.filePath = filePath;
+    }
+
+    @Builder
+    public File(String filePath) {
+
+        this.filePath = filePath;
+    }
+
+
+
+    public void mkdir() {
+    }
+
+    public boolean exists() {
+        File file = new File(filePath);
+        return file.exists();
     }
 }
