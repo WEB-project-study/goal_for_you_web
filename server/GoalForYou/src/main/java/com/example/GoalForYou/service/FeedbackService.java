@@ -14,43 +14,43 @@ public class FeedbackService {
     @Autowired
     private FeedbackRepository feedbackRepository;
 
-    public Long createFeedback(Long user_id, String title, String content) {
+    public Long createFeedback(Long userId, String feedbackTitle, String feedbackContent) {
         Timestamp now = new Timestamp(System.currentTimeMillis());
         Feedback feedback = new Feedback();
 
-        feedback.setUser_id(user_id);
-        feedback.setFeedback_title(title);
-        feedback.setFeedback_content(content);
-        feedback.setFeedback_write_date(now);
-        feedback.setFeedback_edit_date(now);
+        feedback.setUserId(userId);
+        feedback.setFeedbackTitle(feedbackTitle);
+        feedback.setFeedbackContent(feedbackContent);
+        feedback.setFeedbackWriteDate(now);
+        feedback.setFeedbackEditDate(null);
 
         feedbackRepository.save(feedback);
-        return feedback.getFeedback_id();
+        return feedback.getFeedbackId();
     }
 
-    public Feedback getFeedback(Long id) {
-        return feedbackRepository.findById(id).get();
+    public Feedback getFeedback(Long feedbackId) {
+        return feedbackRepository.findById(feedbackId).get();
     }
 
-//    public List<Feedback> getFeedbackList(Long user_id) {
-//        return feedbackRepository.findByUser_id(user_id);
+//    public List<Feedback> getFeedbackList(Long userId) {
+//        return feedbackRepository.findByUserId(userId);
 //    }
 
-    public Long updateFeedback(Long id,String title, String content) {
+    public Long updateFeedback(Long feedbackId,String feedbackTitle, String feedbackContent) {
         Timestamp now = new Timestamp(System.currentTimeMillis());
-        Feedback feedback = feedbackRepository.findById(id).get();
+        Feedback feedback = feedbackRepository.findById(feedbackId).get();
 
-        feedback.setFeedback_title(title);
-        feedback.setFeedback_content(content);
-        feedback.setFeedback_edit_date(now);
+        feedback.setFeedbackTitle(feedbackTitle);
+        feedback.setFeedbackContent(feedbackContent);
+        feedback.setFeedbackEditDate(now);
         feedbackRepository.save(feedback);
 
-        return feedback.getFeedback_id();
+        return feedback.getFeedbackId();
     }
 
-    public void deleteFeedback(Long id) {
+    public void deleteFeedback(Long feedbackId) {
 
-        feedbackRepository.deleteById(id);
+        feedbackRepository.deleteById(feedbackId);
     }
 
 }

@@ -13,39 +13,39 @@ public class BadgeService {
     @Autowired
     private BadgeRepository badgeRepository;
 
-    public Long createBadge(Long user_id, String badgeName, String badgeImage) {
+    public Long createBadge(Long userId, String badgeName, String badgeImage) {
 
         Badge badge = new Badge();
 
-        badge.setUser_id(user_id);
-        badge.setBadge_name(badgeName);
-        badge.setBadge_image(badgeImage);
+        badge.setUserId(userId);
+        badge.setBadgeName(badgeName);
+        badge.setBadgeImage(badgeImage);
 
         badgeRepository.save(badge);
-        return badge.getBadge_id();
+        return badge.getBadgeId();
     }
 
-    public Badge getBadge(Long id) {
+    public Badge getBadge(Long badgeId) {
 
-        return badgeRepository.findById(id).get();
+        return badgeRepository.findById(badgeId).get();
     }
 
-//    public List<Badge> getBadgeList(Long user_id) {
+//    public List<Badge> getBadgeList(Long userId) {
 //
-//        return badgeRepository.findByUser_id(user_id);
+//        return badgeRepository.findByUser_id(userId);
 //    }
 
     public Long updateBadge(Badge badge, String badgeName, String badgeImage) {
 
-        badge.setBadge_name(badgeName);
-        badge.setBadge_image(badgeImage);
+        badge.setBadgeName(badgeName);
+        badge.setBadgeImage(badgeImage);
 
-        return badge.getBadge_id();
+        return badge.getBadgeId();
     }
 
-    public void deleteBadge(Long id) {
+    public void deleteBadge(Long badgeId) {
 
-        badgeRepository.deleteById(id);
+        badgeRepository.deleteById(badgeId);
     }
 
 }

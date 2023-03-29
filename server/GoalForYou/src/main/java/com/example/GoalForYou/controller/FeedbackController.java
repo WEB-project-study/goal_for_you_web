@@ -16,25 +16,25 @@ public class FeedbackController {
 
     @PostMapping("/feedback/create")
     @ResponseBody
-    public String feedbackCreate(@RequestParam Long user_id, @RequestParam String title, @RequestParam String content) {
+    public String feedbackCreate(@RequestParam Long userId, @RequestParam String feedbackTitle, @RequestParam String feedbackContent) {
 
-        feedbackService.createFeedback(user_id, title, content);
+        feedbackService.createFeedback(userId, feedbackTitle, feedbackContent);
 
         return "redirect:";
     }
 
     @GetMapping("/feedback/read/{id}")
     @ResponseBody
-    public Feedback feedbackRead(@PathVariable("id") Long id) {
+    public Feedback feedbackRead(@PathVariable("id") Long feedbackId) {
 
-        return feedbackService.getFeedback(id);
+        return feedbackService.getFeedback(feedbackId);
     }
 
     @PostMapping("/feedback/update")
     @ResponseBody
-    public String feedbackUpdate(@RequestParam Long feedback_id,@RequestParam String title, @RequestParam String content) {
+    public String feedbackUpdate(@RequestParam Long feedbackId,@RequestParam String feedbackTitle, @RequestParam String feedbackContent) {
 
-        feedbackService.updateFeedback(feedback_id, title, content);
+        feedbackService.updateFeedback(feedbackId, feedbackTitle, feedbackContent);
 
 
         return "redirect:";
@@ -42,9 +42,9 @@ public class FeedbackController {
 
     @GetMapping("/feedback/delete/{id}")
     @ResponseBody
-    public String feedbackDelete(@PathVariable("id") Long id) {
+    public String feedbackDelete(@PathVariable("id") Long feedbackId) {
 
-        feedbackService.deleteFeedback(id);
+        feedbackService.deleteFeedback(feedbackId);
 
         return "redirect:";
     }
