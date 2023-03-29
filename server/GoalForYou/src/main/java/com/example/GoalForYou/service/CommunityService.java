@@ -69,11 +69,6 @@ public class CommunityService {
         communityRepository.deleteById(id);
     }
 
-    /** 글 수정  update -> saveCommunity*/
-
-    public void updateCommunity(Long id){
-
-    }
 
 
 //    /** 페이징 */
