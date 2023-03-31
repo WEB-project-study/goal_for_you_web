@@ -29,7 +29,7 @@ public class FileService {
     public FileDto getFile(Long id) throws FileNotFoundException {
         Optional<File> optionalFile = fileRepository.findById(id);
         if (!optionalFile.isPresent()) {
-            // 파일을 찾을 수 없는 경우, 적절한 예외 처리를 해주어야 합니다.
+            // 파일을 찾을 수 없는 경우, 예외처리
             throw new FileNotFoundException("파일을 찾을 수 없습니다. id: " + id);
         }
 
