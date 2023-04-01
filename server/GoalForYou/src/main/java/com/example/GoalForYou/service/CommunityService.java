@@ -26,11 +26,18 @@ public class CommunityService {
         for ( Community community : communityEntities) {
             CommunityDto communityDTO = CommunityDto.builder()
                     .id(community.getCommunityId())
+<<<<<<< Updated upstream
                     .writer(community.getWriter())
                     .title(community.getTitle())
                     .fileId(community.getFileId())
                     .content(community.getContent())
                     .createdDate(community.getCreatedDate())
+=======
+//                    .title(community.getTitle())
+                    .fileId(community.getFileId())
+                    .content(community.getCommunityContent())
+                    .createdDate(community.getCommunityWriteDate())
+>>>>>>> Stashed changes
                     .build();
 
             communityDtoList.add(communityDTO);
@@ -47,11 +54,19 @@ public class CommunityService {
 
         CommunityDto communityDto = CommunityDto.builder()
                 .id(community.getCommunityId())
+<<<<<<< Updated upstream
                 .title(community.getTitle())
                 .writer(community.getWriter())
                 .content(community.getContent())
                 .fileId(community.getFileId())
                 .createdDate(community.getCreatedDate())
+=======
+//                .title(community.getTitle())
+//                .writer(community.getWriter())
+                .content(community.getCommunityContent())
+                .fileId(community.getFileId())
+                .createdDate(community.getCommunityWriteDate())
+>>>>>>> Stashed changes
                 .build();
 
         return communityDto;
@@ -139,9 +154,15 @@ public class CommunityService {
     private CommunityDto convertEntityToDto(Community community) {
         return CommunityDto.builder()
                 .id(community.getCommunityId())
+<<<<<<< Updated upstream
                 .title(community.getTitle())
                 .content(community.getContent())
                 .createdDate(community.getCreatedDate())
+=======
+//                .title(community.getTitle())
+                .content(community.getCommunityContent())
+                .createdDate(community.getCommunityWriteDate())
+>>>>>>> Stashed changes
                 .build();
     }
 

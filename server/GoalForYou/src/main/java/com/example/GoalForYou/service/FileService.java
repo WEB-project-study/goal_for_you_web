@@ -29,7 +29,11 @@ public class FileService {
     public FileDto getFile(Long id) throws FileNotFoundException {
         Optional<File> optionalFile = fileRepository.findById(id);
         if (!optionalFile.isPresent()) {
+<<<<<<< Updated upstream
             // 파일을 찾을 수 없는 경우, 예외처리
+=======
+            // 파일을 찾을 수 없는 경우, 적절한 예외 처리를 해주어야 합니다.
+>>>>>>> Stashed changes
             throw new FileNotFoundException("파일을 찾을 수 없습니다. id: " + id);
         }
 
@@ -37,10 +41,19 @@ public class FileService {
 
         FileDto fileDto = FileDto.builder()
                 .id(id)
+<<<<<<< Updated upstream
                 .origFilename(file.getOrigFilename())
                 .filename(file.getFilename())
+=======
+                .origFilename(file.getFileOrigin())
+                .filename(file.getFileName())
+>>>>>>> Stashed changes
                 .filePath(file.getFilePath())
                 .build();
         return fileDto;
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

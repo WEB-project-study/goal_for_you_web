@@ -21,7 +21,11 @@ public abstract class TimeEntity {
     /** 생성일 주입 **/
     @CreatedDate
     @Column(updatable = false)
+<<<<<<< Updated upstream
     private LocalDateTime createdDate;
+=======
+    private LocalDateTime communityWriteDate;
+>>>>>>> Stashed changes
 
     /** 수정일자 주입 */
     @LastModifiedDate

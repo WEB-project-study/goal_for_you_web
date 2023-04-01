@@ -7,6 +7,10 @@ import com.example.GoalForYou.dto.FileDto;
 import com.example.GoalForYou.service.CommunityService;
 import com.example.GoalForYou.service.FileService;
 import com.example.GoalForYou.util.MD5Generator;
+<<<<<<< Updated upstream
+=======
+import lombok.AllArgsConstructor;
+>>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,8 +19,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.file.Path;
 import java.util.List;
+<<<<<<< Updated upstream
 @Controller
 //@AllArgsConstructor
+=======
+
+@Controller
+@AllArgsConstructor
+>>>>>>> Stashed changes
 public class CommunityController {
     @Autowired
     private CommunityService communityService;
@@ -31,10 +41,18 @@ public class CommunityController {
     @ResponseBody
     public String communityCreate(@RequestParam("file") MultipartFile files, CommunityDto communityDto){
 
+<<<<<<< Updated upstream
             try {
                 String origFilename = files.getOriginalFilename();
                 String filename = new MD5Generator(origFilename).toString();
                 /* 실행되는 위치의 'files' 폴더에 파일이 저장됩니다. */
+=======
+
+            try {
+                String origFilename = files.getOriginalFilename();
+                String filename = new MD5Generator(origFilename).toString();
+                /* 실행되는 위치의 'files' 폴더에 파일이 저장 */
+>>>>>>> Stashed changes
                 String savePath = System.getProperty("user.dir") + "\\files";
                 /* 파일이 저장되는 폴더가 없으면 폴더를 생성합니다. */
                 if (!new File(savePath).exists()) {
@@ -60,7 +78,11 @@ public class CommunityController {
                 e.printStackTrace();
             }
         communityService.saveCommunity(communityDto);
+<<<<<<< Updated upstream
         return "redirect:/";
+=======
+        return communityService.getCommunityList().toString();
+>>>>>>> Stashed changes
     }
 
 //    @PostMapping("/community/create/{id}")
@@ -76,9 +98,16 @@ public class CommunityController {
     @GetMapping("/")
     public String list(Model model) {
         List<CommunityDto> communintyList = communityService.getCommunityList();
+<<<<<<< Updated upstream
         model.addAttribute("communityList", communintyList); /** 프론트에서 가져와야 될 부분 */
 
         return communintyList.toString();
+=======
+        model.addAttribute("communityList", communintyList);
+        /** 프론트에서 가져와야 될 부분 */
+
+        return communityService.getCommunityList().toString(); //나중에 수채
+>>>>>>> Stashed changes
     }
     /** 게시글 조회 => 프론트에서?*/
 //    @GetMapping("/")
@@ -96,10 +125,17 @@ public class CommunityController {
     /** 게시글 상세 조회 페이지 (클릭했을 때 상세 조회)*/
     @RequestMapping(value = "/post/{id}" , method = RequestMethod.GET)
 //    @GetMapping("/community/{id}")
+<<<<<<< Updated upstream
     public String detail(@PathVariable("id") Long id, Model model) {
         CommunityDto communityDTO = (CommunityDto) communityService.getCommunity(id);
         model.addAttribute("communityDto", communityDTO);
         return communityDTO.toString();
+=======
+    public String detail(@PathVariable("id") Long communityId, Model model) {
+        CommunityDto communityDTO = (CommunityDto) communityService.getCommunity(communityId);
+        model.addAttribute("communityDto", communityDTO);
+        return communityDTO.toString(); //나중에 수정
+>>>>>>> Stashed changes
     }
 
 //    /** 게시글 수정 페이지 */
@@ -115,15 +151,26 @@ public class CommunityController {
     public String update(CommunityDto communityDTO) {
         communityService.saveCommunity(communityDTO);
 
+<<<<<<< Updated upstream
         return "redirect:/";
+=======
+        return "redirect:";
+>>>>>>> Stashed changes
     }
 
     /** 게시글 삭제 */
     @DeleteMapping("/community/delete/{id}")
+<<<<<<< Updated upstream
     public String delete(@PathVariable("id") Long id) {
         communityService.deleteCommunity(id);
 
         return "redirect:/";
+=======
+    public String delete(@PathVariable("id") Long communityId) {
+        communityService.deleteCommunity(communityId);
+
+        return "redirect:";
+>>>>>>> Stashed changes
     }
     /**이미지 파일*/
 //    public CommunityController(CommunityService communityService, FileService fileService) {

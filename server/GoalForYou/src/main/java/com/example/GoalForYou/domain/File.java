@@ -21,11 +21,19 @@ public class File {
 
     /**원래 파일명**/
     @Column(nullable = false)
+<<<<<<< Updated upstream
     private String origFilename;
 
     /** 저장 파일명 */
     @Column(nullable = false)
     private String filename;
+=======
+    private String fileOrigin;
+
+    /** 저장 파일명 */
+    @Column(nullable = false)
+    private String fileName;
+>>>>>>> Stashed changes
 
     /** 파일 경로 **/
     @Column(nullable = false)
@@ -34,12 +42,21 @@ public class File {
     @Builder
     public File(Long id, String origFilename, String filename, String filePath) {
         this.fileId = id;
+<<<<<<< Updated upstream
         this.origFilename = origFilename;
         this.filename = filename;
         this.filePath = filePath;
     }
 
     @Builder
+=======
+        this.fileOrigin = origFilename;
+        this.fileName = filename;
+        this.filePath = filePath;
+    }
+
+//    @Builder
+>>>>>>> Stashed changes
     public File(String filePath) {
 
         this.filePath = filePath;
