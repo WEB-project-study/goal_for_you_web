@@ -20,7 +20,7 @@ ___
 
 ___
 
-|**이헌석**|**이나경**|**Je Hyeon Shin**|**yeoni98**|**한지수**|
+|**이헌석**|**이나경**|**Je Hyeon Shin**|**최다연**|**한지수**|
 |------|-----|-----|-----|-----|
 |@HeonSeok98|@nakyoung98|@ssinsaram2|@yeoni98|@eldeoddt|
 |![](https://avatars.githubusercontent.com/u/109660331?v=4)|![](https://avatars.githubusercontent.com/u/66313756?v=4)|![](https://avatars.githubusercontent.com/u/19249641?v=4)|![](https://avatars.githubusercontent.com/u/88011254?v=4)|![](https://avatars.githubusercontent.com/u/90364562?v=4)|
